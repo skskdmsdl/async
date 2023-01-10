@@ -1,8 +1,9 @@
 package com.dev.async.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -14,7 +15,7 @@ public class EmailService {
     }
 
     @Async("messagingTaskExecutor")
-    public void messagingTaskExecutor() {
+    public void sendMailWithCustomThreadPool() {
         System.out.println("[messagingTaskExecutor] :: " + Thread.currentThread().getName());
     }
 }
