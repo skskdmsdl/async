@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class EmailService {
 
+    // @Async 선언한 경우 private은 사용 못함 -> public 사용하기
     @Async("defaultTaskExecutor")
     public void sendMail() {
         System.out.println("[sendMail] :: " + Thread.currentThread().getName());
