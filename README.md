@@ -15,3 +15,20 @@
 
 ## Java의 비동기
 Java에서는 ThreadPool을 생성하여 Async 작업을 처리
+
+## ThreadPool 생성 옵션
+1. corePoolSize
+기본적으로 관리할 쓰레드 숫자
+
+2. maximumPoolSize
+corePoolSize 를 초과하여 최대로 만들 쓰레드 숫자
+
+3. keepAliveTime
+corePoolSize 를 초과하여 생성된 쓰레드가 작업을 대기할 시간
+이 시간을 초과하면 corePoolSize 를 초과한 개수의 쓰레드를 정리함
+
+4. unit
+keepAliveTime 의 단위
+
+5. workQueue
+모든 쓰레드가 작업 중일때 task 를 보관할 큐
